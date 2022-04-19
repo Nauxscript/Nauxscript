@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" class=" ">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nauxscript</title>
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css">
+  
+<link rel="stylesheet" href="/./css/normalize.css">
+ 
+  
+<link rel="stylesheet" href="/./css/tailwind.css">
+
+  
+<link rel="stylesheet" href="/./css/sspai.css">
+
+  
+<link rel="stylesheet" href="/./css/layout.css">
+
+  
+<link rel="stylesheet" href="/./css/index.css">
+
+  
+<link rel="stylesheet" href="/./css/components.css">
+
+  
+<script src="/./js/layout.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body class="bg-gray-200 dark:bg-gray-700 opacity-0">
+  <div class="post-detail-container w-full h-screen max-h-screen flex flex-col items-center overflow-y-auto overflow-x-hidden">
+  <div class="article-container w-8/12 xl:w-6/12 flex-1">
+    <article class="post-container w-full relative">
+      <div class="post-header py-4 border-b-2 border-dashed border-red-300 mb-8">
+        <h1 class="mb-4">奇怪的JavaScript¿</h1>
+        <p class="flex items-center mb-0 leading-[1.2rem]">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          2021 / 07 / 10 
+          
+            <span id="/2021/07/10/%E5%A5%87%E6%80%AA%E7%9A%84JavaScript%C2%BF/" class="leancloud_visitors inline-flex items-center pl-8 leading-[1.2rem]" data-flag-title="奇怪的JavaScript¿">
+              <text class="post-meta-item-text flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+                <i class="iconfont leancloud-visitors-count"></i>
+              </text>
+            </span>
+          
+        </p>
+      </div>
+      <h3 id="1、Object-getOwnPropertyNames"><a href="#1、Object-getOwnPropertyNames" class="headerlink" title="1、Object.getOwnPropertyNames"></a>1、Object.getOwnPropertyNames</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.getOwnPropertyNames(<span class="string">&quot;hahahaha&quot;</span>);</span><br><span class="line"><span class="comment">// 输出: [&quot;0&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;length&quot;]</span></span><br></pre></td></tr></table></figure>
+
+<p>在 ES5 中，如果参数不是一个原始对象类型，将抛出一个 TypeError   异常。<br>在 ES2015 中，<strong>非对象参数被强制转换为对象</strong> 。</p>
+<h3 id="2、Symbol"><a href="#2、Symbol" class="headerlink" title="2、Symbol"></a>2、Symbol</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> t = &#123;&#125;;</span><br><span class="line"><span class="keyword">const</span> tt = <span class="built_in">Symbol</span>(<span class="string">&quot;tt&quot;</span>);</span><br><span class="line">t[tt] = <span class="number">123</span>;</span><br><span class="line"><span class="built_in">console</span>.log(t); <span class="comment">// &#123;Symbol(tt): 123&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify(t)); <span class="comment">// &quot;&#123;&#125;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>如果我们为对象的属性名使用了 Symbol，那么 JSON 输出将不包含它的值。这是为什么呢? 虽然 JavaScript 获得了对 Symbol 的支持，但这并不意味着 JSON 规范已经改变! JSON 只允许字符串作为键，JavaScript 不会尝试在最终 JSON 有效负载中表示 Symbol 属性。</p>
+<h3 id="3、Array-of"><a href="#3、Array-of" class="headerlink" title="3、Array.of()"></a>3、Array.of()</h3><h5 id="定义：返回由所有参数值组成的数组，如果没有参数，就返回一个空数组。"><a href="#定义：返回由所有参数值组成的数组，如果没有参数，就返回一个空数组。" class="headerlink" title="定义：返回由所有参数值组成的数组，如果没有参数，就返回一个空数组。"></a>定义：返回由所有参数值组成的数组，如果没有参数，就返回一个空数组。</h5><h5 id="目的：Array-of-出现的目的是为了解决上述构造器因参数个数不同，导致的行为有差异的问题。"><a href="#目的：Array-of-出现的目的是为了解决上述构造器因参数个数不同，导致的行为有差异的问题。" class="headerlink" title="目的：Array.of() 出现的目的是为了解决上述构造器因参数个数不同，导致的行为有差异的问题。"></a>目的：Array.of() 出现的目的是为了解决上述构造器因参数个数不同，导致的行为有差异的问题。</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 字面量方式:</span></span><br><span class="line"><span class="comment">// 这个方法也是我们最常用的，在初始化数组的时候 相当方便</span></span><br><span class="line"><span class="keyword">var</span> a = [<span class="number">3</span>, <span class="number">11</span>, <span class="number">8</span>]; <span class="comment">// [3,11,8];</span></span><br><span class="line"><span class="comment">// 构造器:</span></span><br><span class="line"><span class="comment">// 实际上 new Array === Array,加不加new 一点影响都没有。</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="built_in">Array</span>(); <span class="comment">// []</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="built_in">Array</span>(<span class="number">3</span>); <span class="comment">// [undefined,undefined,undefined] 奇怪的东西</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="built_in">Array</span>(<span class="number">3</span>, <span class="number">11</span>, <span class="number">8</span>); <span class="comment">// [ 3,11,8 ] 奇怪的东西</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 不诡异的方式</span></span><br><span class="line"><span class="keyword">let</span> a = <span class="built_in">Array</span>.of(<span class="number">3</span>, <span class="number">11</span>, <span class="number">8</span>); <span class="comment">// [3,11,8]</span></span><br><span class="line"><span class="keyword">let</span> a = <span class="built_in">Array</span>.of(<span class="number">3</span>); <span class="comment">// [3]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4、关于-const"><a href="#4、关于-const" class="headerlink" title="4、关于 const"></a>4、关于 const</h3><p>const 实际上保证的，并不是变量的值不得改动，而是变量指向的那个内存地址所保存的数据不得改动。对于简单类型的数据（数值、字符串、布尔值），值就保存在变量指向的那个内存地址，因此等同于常量。但对于复合类型的数据（主要是对象和数组），变量指向的内存地址，保存的只是一个指向实际数据的指针，const 只能保证这个指针是固定的（即总是指向另一个固定的地址），至于它指向的数据结构是不是可变的，就完全不能控制了。因此，将一个对象声明为常量必须非常小心。（出自阮一峰的 ECMAScript 6 入门）</p>
+<h3 id="5、关于-undefined-与-null，以及-与-的区别-以及-与-的区别"><a href="#5、关于-undefined-与-null，以及-与-的区别-以及-与-的区别" class="headerlink" title="5、关于 undefined 与 null，以及 === 与 == 的区别 以及 !== 与 != 的区别"></a>5、关于 undefined 与 null，以及 === 与 == 的区别 以及 !== 与 != 的区别</h3><p><strong>=== 全等，当且仅当左右操作数类型相等，且值相等时，才会返回 true，当左右两个操作数不是同一类型时，js 不会转换其类型</strong><br><strong>== 相等，仅当左右操作数相等时返回 true，如果两个操作数不是同一类型时，js 会尝试将其转化为合适的类型，然后进行比较</strong><br><strong>!== 不完全相等</strong><br><strong>!= 不相等，仅当左右操作数相等时返回 true，如果两个操作数不是同一类型时，js 会尝试将其转化为合适的类型，然后进行比较</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">undefined == null //true 此时他们的返回的都是false，他们的类型不相同，但他们转成合适的类型后相同</span><br><span class="line">undefined != null //false 此时他们的返回的都是false，且他们转成合适的类型后也是相等的</span><br><span class="line">undefined === null //false 此时他们的返回的都是false，他们的类型不相同</span><br><span class="line">undefined !== null //true 此时他们的返回的都是false，他们的类型不相同</span><br></pre></td></tr></table></figure>
+
+<h3 id="6、void-0-与-undefined-的区别"><a href="#6、void-0-与-undefined-的区别" class="headerlink" title="6、void 0 与 undefined 的区别"></a>6、void 0 与 undefined 的区别</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function foo() &#123;</span><br><span class="line">		var a  = arguments[0] !== (void 0 ) ? arguments[0] : 2;</span><br><span class="line">		return a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这一段代码中 void 0 是用来替代 undefined 的，第一句实现了 ES6 中 function 中的参数默认值。为什么不直接用 arguments[0] !== undefined 来判断？<br>因为：</p>
+<ol>
+<li> undefined 在 ES5 中已经是全局对象的一个只读（read-only）属性了，它不能被重写。但是在局部作用域中，还是可以被重写的。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">(function() &#123;</span><br><span class="line">  var undefined = 10;</span><br><span class="line">  alert(undefined); // 10 -- chrome</span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line">(function() &#123;</span><br><span class="line">  undefined = 10;</span><br><span class="line">  alert(undefined); // undefined -- chrome</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li> void 运算符能对给定的表达式进行求值，然后返回 undefined。也就是说，void 后面你随便跟上一个表达式，返回的都是 undefined，如 void (2), void (‘hello’)。并且 void 是不能被重写的。但为什么是 void 0 呢，void 0 是表达式中最短的。用 void 0 代替 undefined 能节省字节。不少 JavaScript 压缩工具在压缩过程中，正是将 undefined 用 void 0 代替掉了。</li>
+</ol>
+<h3 id="7、-Symbol-iterator"><a href="#7、-Symbol-iterator" class="headerlink" title="7、*[Symbol.iterator]"></a>7、*[Symbol.iterator]</h3><p><em><a href="">Symbol.iterator</a> { } 等价于 [Symbol.iterator]: function</em>() {}<br>`</p>
+<p>`<br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/function*">funciton*</a> 代表定义一个生成器函数，它会返回一个 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Generator">Generator</a> 对象</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">generator</span>(<span class="params">i</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">yield</span> i;</span><br><span class="line">  <span class="keyword">yield</span> i + <span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> gen = generator(<span class="number">10</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(gen.next().value);</span><br><span class="line"><span class="comment">// expected output: 10</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(gen.next().value);</span><br><span class="line"><span class="comment">// expected output: 20</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="7、Function-length"><a href="#7、Function-length" class="headerlink" title="7、Function.length"></a>7、Function.length</h3><p>length 是函数对象的一个属性值，指该函数期望传入的参数数量，即形参的个数。<br>形参的数量不包括剩余参数个数，仅包括第一个具有默认值之前的参数个数。<br>与之对比的是， arguments.length 是函数被调用时实际传参的个数。</p>
+<p>详细请看 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/length">Function.length</a></p>
+<h3 id="8、Typescript-中的-this-声明"><a href="#8、Typescript-中的-this-声明" class="headerlink" title="8、Typescript 中的 this 声明"></a>8、Typescript 中的 this 声明</h3><p>详细请看 <a target="_blank" rel="noopener" href="https://juejin.cn/post/6859914549341093896">Typescript 中与 this 相关的类型定义</a></p>
+
+      <div class="toc fixed border-l-2 border-dashed border-red-300 pl-4 box-content hidden xl:flex xl:right-1/4 h-auto top-8 whitespace-nowrap w-40 flex-col">
+  
+  <div class="flex">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 my-2 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+    </svg>
+    <div class="flex flex-wrap">
+      
+        <a href="/.//tags/前端" class="post-title border-b-2 my-2 border-gray-700 dark:border-gray-200 border-dashed hover:border-red-400 dark:hover:border-red-400 mr-2 text-gray-700 dark:text-gray-200">前端</a>
+      
+        <a href="/.//tags/Javascript" class="post-title border-b-2 my-2 border-gray-700 dark:border-gray-200 border-dashed hover:border-red-400 dark:hover:border-red-400 mr-2 text-gray-700 dark:text-gray-200">Javascript</a>
+      
+    </div>
+  </div>
+</div>
+    </article>
+    <div class="devider">無了</div>
+    <div class="flex w-full justify-between mb-12">
+      <a class="post-to prev flex flex-nowrap items-center justify-start text-gray-700 w-1/3 max-w-1/3 " href="/./2021/11/01/基于Hexo搭建个人博客/">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
+        </svg>
+        <p class="m-0 truncate">基于Hexo搭建个人博客</p>
+      </a>
+      <a class="post-to next flex flex-nowrap items-center justify-end text-gray-700 w-1/3 max-w-1/3 " href="/./2020/10/02/A Testing Article/">
+        <p class="m-0 truncate">A Testing Article</p>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </a>
+    </div>
+    <div id="vcomments"></div>
+    
+<div class="sticky pl-4 translate-x-[calc(100%+1rem)] hidden xl:flex xl:right-1/4 bottom-6 transition-opacity opacity-0 h-0">
+  <div id="to-top" class="rounded-md w-12 h-12 -mt-14 flex justify-center items-center bg-blue-400 opacity-30 text-white cursor-pointer hover:opacity-100 transition-opacity">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12" />
+    </svg>
+  </div>
+</div>
+
+<script src="/./js/to-top.js"></script>
+
+  </div>
+  <footer class="w-screen h-36 flex-shrink-0 flex flex-col justify-center items-center bg-white dark:bg-gray-800">
+  Power by Hexo / Theme Nauxscript
+</footer>
+  <div class="flex flex-col fixed w-10 right-4 top-0 h-full justify-center opacity-30 hover:opacity-100 transition-all z-30">
+  <a class="tag-1 side-bar-btn bg-blue-400 my-2 relative" href="/">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 z-10 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+    </svg>
+  </a>
+  <div class="tag-1 side-bar-btn bg-blue-400 my-2 relative" id="post-list">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 z-10 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+    </svg>
+  </div>
+  <a class="tag-1 side-bar-btn bg-blue-400 my-2 relative" href="/.//archives">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 z-10 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+    </svg>
+  </a>
+  <a class="tag-1 side-bar-btn bg-blue-400 my-2 relative" href="/.//about">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 z-10 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+    </svg>
+  </a>
+  <div id="toggleDarkMode" class="side-bar-btn tag-1 bg-blue-400 my-2 relative">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 z-10 text-blue-400 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 visible dark-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 z-10 text-blue-400 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 invisible light-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+    </svg>
+  </div>
+</div>
+
+<script src="/./js/sidebar.js"></script>
+
+</div>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+  new Valine({
+    el: '#vcomments',
+    app_id: '7eB2hFYtCcGRbwjz0CCJkH9u-gzGzoHsz',
+    app_key: 'XDop6Gv6pIm8Q8T8bT6u71IU',
+    placeholder: '来吧，say something...',
+    notify: '',
+    verify: '',
+    avatar: '',
+    visitor: 'true'
+  });
+</script>
+  
+<script src="/./js/trigger.js"></script>
+
+  
+<script src="/./js/auto-darkmode.js"></script>
+
+</body>
+</html>

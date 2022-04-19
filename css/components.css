@@ -1,0 +1,87 @@
+/* ============== toc.ejs ============= */
+.toc {
+  /* left: calc(100% - 6rem); */
+  transform: translateX(calc(100% + 2rem));
+}
+.side-item {
+  margin: 4px 0;
+  height: 1.6rem;
+  line-height: 1.6rem;
+}
+
+.side-link {
+  /* display: inline-block; */
+  color: #F87171;
+}
+.side-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+  display: inline-block;
+}
+
+/* ============== sidebar.ejs ============= */
+.side-bar-btn {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: (背景图); */
+  cursor: pointer;
+}
+.side-bar-btn::after {
+  content: "";
+  position: absolute;
+  top: .25rem;
+  left: .25rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: #fff;
+  border-radius: 4rem;
+  transition: transform 100ms ease-in-out;
+}
+
+.side-bar-btn:hover::after {
+  transform: scale(0.9);
+}
+
+.side-bar-btn:hover svg, .side-bar-btn:hover a svg {
+  transition: all 100ms ease-in-out;
+}
+
+.side-bar-btn:hover svg, .side-bar-btn:hover > a svg {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+/* ============== page-title.ejs ============= */
+.hash-tag::after {
+  content: "";
+  position: absolute;
+  background-color: #9CA3AF;
+  top: 0;
+  right: -25%;
+  height: 100%;
+  width: 2px;
+  transform: rotate(30deg);
+}
+
+.dark .dark-icon {
+  visibility: hidden;
+}
+
+.dark .light-icon {
+  visibility: visible;
+}
+
+/* ============== toc.ejs ============= */
+
+/* ============== toc.ejs ============= */
+
+/* ============== toc.ejs ============= */
+
+/* ============== toc.ejs ============= */
