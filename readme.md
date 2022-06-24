@@ -17,7 +17,7 @@ I’m currently learning :
 <p align="center">
   <samp>
     ·
-    <a targeg="_blank" href="http://nauxscript.com"><img src="https://img.shields.io/badge/-Blog-blue" alt="大象" /></a>
+    <a target="_blank" href="http://nauxscript.com"><img src="https://img.shields.io/badge/-Blog-blue" alt="大象" /></a>
     ·
     <a href="mailto:nauxscript.gmail.com"><img src="https://img.shields.io/badge/-Email-%23ff69b4" alt="nauxscript.gmail.com" /></a>
     ·
