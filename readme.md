@@ -14,6 +14,17 @@ I’m currently learning :
 - more and deeper about javascript
 - and ...
 
+---
+
+
+<p align="center">生活不是只有赚钱，生活要像海里的鱼。 </p>
+
+<p align="center">Life is not just about making money, life should be like a fish in the sea.</p>
+
+
+---
+
+
 <p align="center">
   <samp>
     ·
