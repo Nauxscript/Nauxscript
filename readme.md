@@ -1,10 +1,10 @@
-Hi there!👋🏻
+### Hi there ! 👋🏻
 
 This is Nauxscript, 
 
-- a Front-End Developer
-- a Vimer
-- tow cats owners'
+- a Front-End Developer 👨🏻‍💻
+- a Vimer ⌨️
+- tow cats owners' 🐈 🐈‍⬛
 
 I’m currently learning :
 
