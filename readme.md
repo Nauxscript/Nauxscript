@@ -2,9 +2,10 @@
 
 This is Nauxscript, 
 
-- a Front-End Developer 👨🏻‍💻
-- a Vimer ⌨️
-- tow cats owners' 🐈 🐈‍⬛
+- A Front-End Developer 👨🏻‍💻
+- A Vimer ⌨️
+- Two Cats Owners' 🐈 🐈‍⬛
+- Advocator of Work-Life Balance 🛠⚖️🏠
 
 I’m currently learning :
 
