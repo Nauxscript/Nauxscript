@@ -9,10 +9,10 @@ This is Nauxscript,
 
 I’m currently learning :
 
-- typescript
-- vue3
+- TypeScript
+- Vue3
 - Test Driven Development(TDD) development approach
-- more and deeper about javascript
+- more and deeper about JavaScript
 - and ...
 
 ---
