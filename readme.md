@@ -28,11 +28,11 @@ I’m currently learning :
 <p align="center">
   <samp>
     ·
-    <a target="_blank" href="http://nauxscript.com"><img src="https://img.shields.io/badge/Blog-white?logo=Hexo&style=flat" /></a>
+    <a target="_blank" href="http://blog.nauxscript.com"><img src="https://img.shields.io/badge/Blog-white?logo=Astro&style=flat" /></a>
     ·
     <a href="mailto:nauxscript.gmail.com"><img src="https://img.shields.io/badge/email-yellow?logo=Gmail&style=flat" alt="nauxscript.gmail.com" /></a>
     ·
-    <a href="https://twitter.com/nauxscript"><img src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fnauxscript" /></a>
+    <a target="_blank" href="https://twitter.com/nauxscript"><img src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fnauxscript" /></a>
     ·
   </samp>
 </p>
