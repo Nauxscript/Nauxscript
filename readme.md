@@ -16,13 +16,14 @@ I’m currently exploring:
 - Deepening my knowledge about JavaScript
 - and more...
 
-## My Open Source Projects 🚀
+#### My Open Source Projects 🚀
 - [Just-vim-it](https://github.com/nauxscript/just-vim-it): A beginner-friendly Vim guidebook.
 - [Bilive](https://github.com/nauxscript/bilive): A bullet screen assistant for Bilibili Danmu Network, enabling you to view live room bullet screens from the command line.
 
-I also have a keen interest in creating simple Alfred workflows based on JXA. Here are some of my workflow collections:
+#### My Alfred Workflows 💻
 
-## My Alfred Workflows 💻
+*I also have a keen interest in creating simple Alfred workflows based on JXA. Here are some of my workflow collections:*
+
 - [alfred-wechat-stickers](https://github.com/nauxscript/alfred-wechat-stickers)
 - [alfred-open-port](https://github.com/nauxscript/alfred-open-port)
 - [alfred-gpt-jarvis](https://github.com/nauxscript/alfred-gpt-jarvis) (WIP...)
