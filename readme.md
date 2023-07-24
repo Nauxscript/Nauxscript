@@ -1,26 +1,38 @@
-### Hi there ! 👋🏻
+### Hi there! 👋🏻
 
-This is Nauxscript, 
+I'm Nauxscript, 
 
 - A Front-End Developer 👨🏻‍💻
-- A Vimer ⌨️
-- Two Cats Owners' 🐈 🐈‍⬛
-- Advocator of Work-Life Balance 🛠⚖️🏠
+- An avid Vimer ⌨️
+- The proud owner of two cats 🐈 🐈‍⬛
+- An advocate for Work-Life Balance 🛠⚖️🏠
 
-I’m currently learning :
+I’m currently exploring:
 
-- TypeScript
-- Vue3
-- Test Driven Development(TDD) development approach
-- more and deeper about JavaScript
-- and ...
+- [SolidJS](https://www.solidjs.com/)
+- [NestJS](https://nestjs.com/)
+- [VueJS](https://vuejs.org/)
+- The Test-Driven Development (TDD) approach
+- Deepening my knowledge about JavaScript
+- and more...
+
+## My Open Source Projects 🚀
+- [Just-vim-it](https://github.com/nauxscript/just-vim-it): A beginner-friendly Vim guidebook.
+- [Bilive](https://github.com/nauxscript/bilive): A bullet screen assistant for Bilibili Danmu Network, enabling you to view live room bullet screens from the command line.
+
+I also have a keen interest in creating simple Alfred workflows based on JXA. Here are some of my workflow collections:
+
+## My Alfred Workflows 💻
+- [alfred-wechat-stickers](https://github.com/nauxscript/alfred-wechat-stickers)
+- [alfred-open-port](https://github.com/nauxscript/alfred-open-port)
+- [alfred-gpt-jarvis](https://github.com/nauxscript/alfred-gpt-jarvis) (WIP...)
 
 ---
 
 
 <p align="center">生活不是只有赚钱，生活要像海里的鱼。 </p>
 
-<p align="center">Life is not just about making money, life should be like a fish in the sea.</p>
+<p align="center">Life isn't merely about earning money; it should be as free as a fish in the sea.</p>
 
 
 ---
