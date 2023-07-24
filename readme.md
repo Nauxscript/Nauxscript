@@ -18,7 +18,7 @@ I’m currently exploring:
 
 #### My Open Source Projects 🚀
 - [Just-vim-it](https://github.com/nauxscript/just-vim-it): A beginner-friendly Vim guidebook.
-- [Bilive](https://github.com/nauxscript/bilive): A bullet screen assistant for Bilibili Danmu Network, enabling you to view live room bullet screens from the command line.
+- [Bilive](https://github.com/nauxscript/bilive): A bullet screen assistant for [Bilibili](https://www.bilibili.com/), enabling you to view live room bullet screens from the command line.
 
 #### My Alfred Workflows 💻
 
