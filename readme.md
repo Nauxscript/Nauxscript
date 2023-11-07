@@ -28,6 +28,16 @@ I’m currently exploring:
 - [alfred-open-port](https://github.com/nauxscript/alfred-open-port)
 - [alfred-gpt-jarvis](https://github.com/nauxscript/alfred-gpt-jarvis) (WIP...)
 
+#### Coding Life
+
+![Github Stats](https://github-readme-stats.vercel.app/api?username=nauxscript&count_private=true&show_icons=true&include_all_commits=true)
+
+![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=nauxscript&layout=compact&langs_count=100&hide=HTML,Makefile,CSS)
+
+#### Recent Activity
+
+![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=nauxscript&theme=vue)
+
 ---
 
 
