@@ -10,6 +10,7 @@ I'm Nauxscript,
 I’m currently exploring:
 
 - [SolidJS](https://www.solidjs.com/)
+- [ReactJS](https://react.dev/)
 - [NestJS](https://nestjs.com/)
 - [VueJS](https://vuejs.org/)
 - The Test-Driven Development (TDD) approach
