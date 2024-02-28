@@ -5,7 +5,7 @@
 - 👨🏻‍💻 Full-Stack Developer
 - ⌨️ Vimer
 - 🐈 🐈‍⬛ The proud owner of two cats
-- 🌅 (Eager to become) a Freelancer (❤️❤️ I am looking for a remote job! If there is any opportunity, please let me know. Much love! ❤️❤️
+- 🌅 (Eager to become) a Freelancer (❤️❤️ **I am looking for a remote job! If there is any opportunity, please let me know. Much love!** ❤️❤️
 
 I’m currently exploring:
 
@@ -27,7 +27,7 @@ I’m currently exploring:
 
 #### Self-made Alfred Workflows 💻
 
-*I also have a keen interest in creating simple Alfred workflows based on JXA. Here are some of my self-made workflows. *
+*I also have a keen interest in creating simple Alfred workflows based on JXA. Here are some of my self-made workflows.*
 
 - [alfred-wechat-stickers](https://github.com/nauxscript/alfred-wechat-stickers)
 - [alfred-open-port](https://github.com/nauxscript/alfred-open-port)
