@@ -3,6 +3,7 @@
 ### I'm Nauxscript, 
 
 - 👨🏻‍💻 Full-Stack Developer
+- 🪙 Web3 ~Enthusias~ Rookie
 - ⌨️ Vimer
 - 🐈 🐈‍⬛ The proud owner of two cats
 - 🌅 (Eager to become) a Freelancer (❤️❤️ **I am looking for a remote job! If there is any opportunity, please let me know. Much love!** ❤️❤️
@@ -24,6 +25,7 @@ I’m currently exploring:
 
 - [Just-vim-it](https://github.com/nauxscript/just-vim-it): A beginner-friendly Vim guidebook.
 - [Bilive](https://github.com/nauxscript/bilive): A bullet screen assistant for [Bilibili](https://www.bilibili.com/), enabling you to view live room bullet screens from the command line.
+- [xdmxdm.tech](https://github.com/Nauxscript-dev/xdmxdm): A cool website that gathers useful study materials for developers. In English, **“xdmxdm”** means “Bros, let’s go write some code!” 🤣 (Long-term updates).
 
 #### Self-made Alfred Workflows 💻
 
