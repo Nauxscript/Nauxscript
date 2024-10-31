@@ -5,7 +5,7 @@
 - 👨🏻‍💻 Full-Stack Developer
 - 🪙 Web3 ~Enthusias~ Rookie
 - ⌨️ Vimer
-- 🐈 🐈‍⬛ The proud owner of two cats
+- 🐈 🐈‍⬛ 🐈‍⬛ The proud owner of three cats
 - 🌅 (Eager to become) a Freelancer (❤️❤️ **I am looking for a remote job! If there is any opportunity, please let me know. Much love!** ❤️❤️
 
 I’m currently exploring:
