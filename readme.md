@@ -33,9 +33,10 @@ I’m currently exploring:
 
 - [alfred-wechat-stickers](https://github.com/nauxscript/alfred-wechat-stickers)
 - [alfred-open-port](https://github.com/nauxscript/alfred-open-port)
-- [alfred-easy-translate]([url](https://github.com/Nauxscript/alfred-easy-translate))
+- [alfred-easy-translate](https://github.com/Nauxscript/alfred-easy-translate)
 - [alfred-open-pages](https://github.com/Nauxscript/alfred-open-pages)
 - [alfred-gpt-jarvis](https://github.com/nauxscript/alfred-gpt-jarvis)
+- [alfred-cursor-open](https://github.com/Nauxscript/alfred-cursor-open)
 
 #### Coding Life
 
